@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "designxmcp"
+version = "1.0.0"
+description = "DesignXMCP — Jio Design System tools for Claude"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.0.0",
+]
+
+[project.scripts]
+designxmcp = "server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[tool.hatch.build]
+include = [
+    "server.py",
+    "knowledge_base.py",
+    "knowledge/**",
+    "assets/**",
+]

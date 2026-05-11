@@ -1,0 +1,472 @@
+"""
+DesignXMCP Knowledge Base — tokens, components, assets, Figma refs, icons.
+Two design system variants:
+  - JDS 2.0  → TOKENS, FIGMA_REFS  (34 components, Jio Design System)
+  - OneUI    → ONEUI_TOKENS, ONEUI_FIGMA_REFS  (25 components, OneUI DS)
+"""
+
+# ── Design Tokens ────────────────────────────────────────────────────────────
+
+TOKENS = {
+    "colors": {
+        "primary-20": "#e8e8fc",
+        "primary-30": "#9999ff",
+        "primary-40": "#6464ff",
+        "primary-50": "#3535f3",
+        "primary-60": "#000093",
+        "primary-70": "#00004c",
+        "primary-80": "#010029",
+        "secondary-20": "#fef7e9",
+        "secondary-30": "#ffe3ae",
+        "secondary-40": "#ffd947",
+        "secondary-50": "#f7ab20",
+        "secondary-60": "#ac660c",
+        "secondary-70": "#7f4b10",
+        "secondary-80": "#401d0c",
+        "sparkle-20": "#e8faf7",
+        "sparkle-30": "#a7f6e9",
+        "sparkle-40": "#7aebd9",
+        "sparkle-50": "#1eccb0",
+        "sparkle-60": "#1e7b74",
+        "sparkle-70": "#0e5c4f",
+        "sparkle-80": "#08332c",
+        "error": "#fa2f40",
+        "warning": "#f06d0f",
+        "success": "#25ab21",
+        "grey-100": "#141414",
+        "grey-80": "rgba(0,0,0,0.66)",
+        "grey-60": "#b5b5b5",
+        "grey-40": "#e0e0e0",
+        "grey-20": "#f5f5f5",
+        "white": "#ffffff",
+        "black": "#141414",
+        "surface-default": "#ffffff",
+        "surface-ghost": "#eeeeef",
+        "surface-ghost-icon": "#e7e9ff",
+        "surface-bold": "#3900ad",
+        "surface-minimal": "#f5f5f5",
+        "surface-moderate": "#e3e3e4",
+        "text-high": "#141414",
+        "text-low": "rgba(25,27,30,0.65)",
+        "text-disabled": "rgba(25,27,30,0.38)",
+        "text-on-bold": "#ffffff",
+        "icon-medium": "#170054",
+        "icon-high": "#141414",
+        "stroke-subtle": "rgba(36,38,43,0.12)",
+        "stroke-minimal": "rgba(36,38,43,0.13)",
+        "indigo-base": "#3800ac",
+        "coral-base": "#ff6644",
+        "teal-base": "#4bbeab",
+        "green-base": "#00a758",
+        "red-base": "#e30412",
+    },
+    "typography": {
+        "display-l":    {"size": "52px", "weight": "Black", "letter-spacing": "-3%", "usage": "Largest headlines"},
+        "display-m":    {"size": "44px", "weight": "Black", "letter-spacing": "-3%"},
+        "display-s":    {"size": "36px", "weight": "Black", "letter-spacing": "-3%"},
+        "headline-l":   {"size": "32px", "weight": "Black/Bold", "letter-spacing": "-3%"},
+        "headline-m":   {"size": "28px", "weight": "Black/Bold", "letter-spacing": "-3%"},
+        "headline-s":   {"size": "24px", "weight": "Black/Bold", "letter-spacing": "-3%"},
+        "headline-xs":  {"size": "22px", "weight": "Black/Bold"},
+        "headline-2xs": {"size": "20px", "weight": "Black/Bold"},
+        "headline-3xs": {"size": "18px", "weight": "Black/Bold"},
+        "title-l":      {"size": "20px", "weight": "Bold"},
+        "title-m":      {"size": "18px", "weight": "Bold"},
+        "title-s":      {"size": "16px", "weight": "Bold"},
+        "title-xs":     {"size": "15px", "weight": "Bold"},
+        "title-2xs":    {"size": "14px", "weight": "Bold"},
+        "title-3xs":    {"size": "13px", "weight": "Bold"},
+        "body-2xl":     {"size": "20px", "weight": "Medium", "line-height": "1.5", "letter-spacing": "-0.5%"},
+        "body-xl":      {"size": "18px", "weight": "Medium", "line-height": "1.5"},
+        "body-l":       {"size": "16px", "weight": "Medium", "line-height": "1.5", "letter-spacing": "-0.5%"},
+        "body-m":       {"size": "15px", "weight": "Medium", "line-height": "1.5"},
+        "body-s":       {"size": "14px", "weight": "Medium", "line-height": "1.5"},
+        "body-xs":      {"size": "13px", "weight": "Medium", "line-height": "1.4"},
+        "body-2xs":     {"size": "12px", "weight": "Medium", "letter-spacing": "0.5%"},
+        "body-3xs":     {"size": "11px", "weight": "Medium", "letter-spacing": "0.5%"},
+        "label-2xl":    {"size": "16px", "weight": "Bold"},
+        "label-xl":     {"size": "15px", "weight": "Bold"},
+        "label-l":      {"size": "14px", "weight": "Bold"},
+        "label-m":      {"size": "13px", "weight": "Bold"},
+        "label-s":      {"size": "12px", "weight": "Bold"},
+        "label-xs":     {"size": "11px", "weight": "Bold"},
+        "label-2xs":    {"size": "10px", "weight": "Bold"},
+        "label-3xs":    {"size": "9px",  "weight": "Bold"},
+        "label-4xs":    {"size": "8px",  "weight": "Bold"},
+        "overline":     {"size": "10px", "weight": "Bold", "transform": "UPPERCASE", "letter-spacing": "0.5%"},
+        "button":       {"size": "14px", "weight": "Bold"},
+    },
+    "spacing": {
+        "4xs": "2px", "3xs": "4px", "2xs": "6px", "xs": "8px",
+        "s": "12px", "base": "14px", "m": "16px", "l": "20px",
+        "xl": "24px", "2xl": "32px", "3xl": "40px", "4xl": "48px",
+        "huge": "64px", "massive": "80px",
+    },
+    "border_radius": {
+        "none": "0px", "xSmall": "4px", "small": "8px", "medium": "12px",
+        "large": "16px", "xl": "24px", "xxl": "32px", "pill": "999px",
+        "shape-xs": "4px", "shape-sm": "8px", "shape-md": "12px",
+        "shape-lg": "16px", "shape-xl": "24px", "shape-2xl": "32px",
+        "shape-4xl": "23px", "shape-pill": "999px", "shape-10xl": "46px",
+    },
+    "opacity": {
+        "invisible": "0", "disabled": "0.38", "enabled": "1.0",
+        "overlay-tint": "0.4", "overlay-blur": "0.8",
+        "text-low": "0.65", "text-disabled": "0.38", "icon-disabled": "0.38",
+        "custom_1": "0.08", "custom_2": "0.16", "custom_3": "0.24",
+    },
+}
+
+# ── OneUI Design Tokens ───────────────────────────────────────────────────────
+
+ONEUI_TOKENS = {
+    "colors": {
+        "grey/surface/fg-minimal":        "#afb1b6",
+        "grey/surface/fg-subtle":         "#afb1b6",
+        "grey/on-default/medium-t":       "#0c0d10",
+        "grey/on-default/low-t":          "#0c0d10",
+        "grey/on-default/medium-s":       "#afb1b6",
+        "grey/on-default/low-s":          "#afb1b6",
+        "grey/on-bold/medium-t":          "#ffffff",
+        "grey/on-bold/low-t":             "#ffffff",
+        "grey/on-bold/medium-s":          "#696d76",
+        "indigo/surface/fg-minimal":      "#a3a7ff",
+        "indigo/surface/fg-subtle":       "#a3a7ff",
+        "indigo/on-subtle/medium-t":      "#0b0034",
+        "indigo/on-subtle/medium-s":      "#8e90ff",
+        "indigo/on-default/medium-s":     "#a3a7ff",
+        "indigo/on-bold/medium-t":        "#ffffff",
+        "indigo/on-bold/medium-s":        "#8584fc",
+        "saffron/surface/fg-minimal":     "#ff885a",
+        "saffron/surface/fg-subtle":      "#ff885a",
+        "saffron/on-subtle/medium-s":     "#ff671f",
+        "transparency/light":             "#ebebec",
+        "transparency/dark":              "#24262b",
+    },
+    "typography": {
+        "display-l":   {"weight": 900, "token": "Typography/Fontsize/Display/[platform] L"},
+        "display-m":   {"weight": 900, "token": "Typography/Fontsize/Display/[platform] M"},
+        "display-s":   {"weight": 900, "token": "Typography/Fontsize/Display/[platform] S"},
+        "headline-l":  {"weight": 900, "token": "Typography/Fontsize/Headline/[platform] L"},
+        "headline-m":  {"weight": 850, "token": "Typography/Fontsize/Headline/[platform] M"},
+        "headline-s":  {"weight": 850, "token": "Typography/Fontsize/Headline/[platform] S"},
+        "title-l":     {"weight": 800, "token": "Typography/Fontsize/Title/[platform] L"},
+        "title-m":     {"weight": 750, "token": "Typography/Fontsize/Title/[platform] M"},
+        "title-s":     {"weight": 750, "token": "Typography/Fontsize/Title/[platform] S"},
+        "system-xl":   {"weight": 700, "token": "Typography/Fontsize/System/[platform] XL"},
+        "system-l":    {"weight": 700, "token": "Typography/Fontsize/System/[platform] L"},
+        "system-m":    {"weight": 500, "token": "Typography/Fontsize/System/[platform] M"},
+        "system-s":    {"weight": 400, "token": "Typography/Fontsize/System/[platform] S"},
+        "system-xs":   {"weight": 400, "token": "Typography/Fontsize/System/[platform] XS"},
+        "system-2xs":  {"weight": 400, "token": "Typography/Fontsize/System/[platform] 2XS"},
+        "system-3xs":  {"weight": 400, "token": "Typography/Fontsize/System/[platform] 3XS"},
+        "font-family": "JioType Var",
+        "font-family-code": "JetBrains Mono",
+    },
+    "spacing": {
+        "0": "0px", "0.5": "2px", "1": "4px", "1.5": "6px",
+        "2": "8px", "2.5": "10px", "3": "12px", "3.5": "14px",
+        "4": "16px", "4.5": "18px", "5": "20px", "5.5": "22px",
+        "6": "24px", "7": "28px", "8": "32px", "9": "36px",
+        "10": "40px", "12": "48px", "14": "56px", "16": "64px",
+        "18": "72px", "20": "80px", "24": "96px", "28": "112px",
+        "32": "128px", "40": "160px",
+    },
+    "border_radius": {
+        "none": "0px", "xs": "2px", "sm": "4px", "md": "8px",
+        "lg": "12px", "xl": "16px", "2xl": "24px", "pill": "999px",
+    },
+    "opacity": {
+        "disabled": "0.38", "enabled": "1.0",
+        "scrim-low": "0.38", "scrim-medium": "0.54", "scrim-high": "0.72",
+    },
+    "themes": ["MyJio", "JioHome", "JioFinance", "JioMart", "JioPowerSight"],
+    "density_modes": ["Default", "Compact", "Open"],
+    "platforms": ["S (Mobile 360)", "M (Tablet 768)", "M (Tablet 1024)", "L (Laptop 1440)", "L (Desktop 1920)"],
+}
+
+# ── OneUI Figma References ────────────────────────────────────────────────────
+
+ONEUI_FIGMA_REFS = {
+    "oneui_foundations": {
+        "name": "OneUI Foundations",
+        "file_key": "ZwganFdy65Ypuk9x0DuWw7",
+        "node_id": "3814:165183",
+        "url": "https://www.figma.com/design/ZwganFdy65Ypuk9x0DuWw7/%E2%8C%98-OneUI-Foundations?node-id=3814-165183",
+        "description": "OneUI colour logics, typography, spacing, elevation, grid — all foundations",
+    },
+    "oneui_components": {
+        "name": "OneUI Components",
+        "file_key": "eYJriZveeBwZDzGlCts22f",
+        "node_id": "242:28497",
+        "url": "https://www.figma.com/design/eYJriZveeBwZDzGlCts22f/%E2%9D%96-OneUI-Components?node-id=242-28497",
+        "description": "Buttons, Avatar, Badge, Input, Checkbox, Chip, Radio, Switch, Scrim, Spinner, Pagination, Divider",
+    },
+    "oneui_micropatterns": {
+        "name": "OneUI Micropatterns",
+        "file_key": "y4r5eCoZhqvPw1U1bm2qfw",
+        "node_id": "0:1",
+        "url": "https://www.figma.com/design/y4r5eCoZhqvPw1U1bm2qfw/%E2%9D%96-OneUI-Micropatterns?node-id=0-1",
+        "description": "HeaderNative, HeaderWeb, BottomNav, TabGroup, ChatInput, ListItem, ContextMenu, Carousel",
+    },
+    "oneui_ref": {
+        "name": "Ref — OneUI (Multi-product)",
+        "file_key": "RDN8OyEWpLAvgxfKNdoeMv",
+        "node_id": "0:1",
+        "url": "https://www.figma.com/design/RDN8OyEWpLAvgxfKNdoeMv/Ref-OneUI?node-id=0-1",
+        "description": "OneUI applied across Jio products — JioMart, MyJio, JioHome, JioFinance, JioPix, JioHotstar, JioGames, JioSarthi, JioPowerSight, Jio.com, Desktop UI. Use as visual reference for product-specific OneUI patterns.",
+        "products": ["JioMart", "MyJio", "JioHome", "JioFinance", "JioPix", "JioHotstar", "JioGames", "JioSarthi", "JioPowerSight", "Jio.com", "Desktop"],
+        "node_map": {
+            "JioMart":       "3:226614",
+            "JioSarthi":     "3:230889",
+            "MyJio":         "3:231202",
+            "JioGames":      "3:231782",
+            "JioHome":       "3:232795",
+            "JioFinance":    "3:233054",
+            "JioPix":        "3:234511",
+            "JioPowerSight": "3:234700",
+            "Jio.com":       "3:234939",
+            "JioHotstar":    "3:237135",
+            "Desktop":       "3:236530",
+        },
+    },
+}
+
+# ── JDS 2.0 Figma References ──────────────────────────────────────────────────
+
+FIGMA_REFS = {
+    "homepage": {
+        "name": "AI Assistant Homepage",
+        "file_key": "yvWQ7pqZSgFIfO0XrzY1me",
+        "node_id": "13157:2011",
+        "url": "https://www.figma.com/design/yvWQ7pqZSgFIfO0XrzY1me/Home-Page-V2.0?node-id=13157-2011&m=dev",
+        "description": "Default homepage layout (360x800px) with voice assistant",
+    },
+    "menu": {
+        "name": "Hamburger Menu",
+        "file_key": "gkZ1yhR3PeuOiExiQD1P5r",
+        "node_id": "722-14999",
+        "url": "https://www.figma.com/design/gkZ1yhR3PeuOiExiQD1P5r/Exploration-new-design?node-id=722-14999&m=dev",
+        "description": "Navigation menu structure",
+    },
+    "chat_page": {
+        "name": "Chat Page",
+        "file_key": "gkZ1yhR3PeuOiExiQD1P5r",
+        "node_id": "718-7049",
+        "url": "https://www.figma.com/design/gkZ1yhR3PeuOiExiQD1P5r/Exploration-new-design?node-id=718-7049&m=dev",
+        "description": "Chat interface design",
+    },
+    "media_page": {
+        "name": "Media Page",
+        "file_key": "gkZ1yhR3PeuOiExiQD1P5r",
+        "node_id": "744-4182",
+        "url": "https://www.figma.com/design/gkZ1yhR3PeuOiExiQD1P5r/Exploration-new-design?node-id=744-4182&m=dev",
+        "description": "Media gallery and player",
+    },
+    "assistants_page": {
+        "name": "Assistants Page",
+        "file_key": "gkZ1yhR3PeuOiExiQD1P5r",
+        "node_id": "718-7775",
+        "url": "https://www.figma.com/design/gkZ1yhR3PeuOiExiQD1P5r/Exploration-new-design?node-id=718-7775&m=dev",
+        "description": "AI assistants showcase",
+    },
+    "tools_page": {
+        "name": "Tools Page",
+        "file_key": "gkZ1yhR3PeuOiExiQD1P5r",
+        "node_id": "720-4552",
+        "url": "https://www.figma.com/design/gkZ1yhR3PeuOiExiQD1P5r/Exploration-new-design?node-id=720-4552&m=dev",
+        "description": "Tools and utilities page",
+    },
+    "oneui_design_kit": {
+        "name": "OneUI Design Kit (BETA)",
+        "file_key": "pIjFmPXLcIJcjRpRVRXGeY",
+        "url": "https://www.figma.com/design/pIjFmPXLcIJcjRpRVRXGeY/OneUI-Design-Kit--BETA-",
+        "description": "Updated component specifications",
+    },
+    "jio_testlab": {
+        "name": "Jio Testlab Library",
+        "file_key": "W3i7cLkwFbcd8YjDpbRPkT",
+        "url": "https://www.figma.com/design/W3i7cLkwFbcd8YjDpbRPkT/Jio-Testlab-Library",
+        "description": "Component test boards and specs",
+    },
+    "chat_input": {
+        "name": "Chat Input",
+        "file_key": "b95Apii4f27AoRxhm0nJZq",
+        "node_id": "19931-32838",
+        "url": "https://www.figma.com/design/b95Apii4f27AoRxhm0nJZq/Chat-Input?node-id=19931-32838&m=dev",
+        "description": "JBIQ Chat Input component — collapsed/expanded states, voice states",
+    },
+}
+
+# ── Assets  (update CDN_BASE after you push your GitHub repo) ─────────────────
+# TODO: Replace YOUR_USERNAME/YOUR_REPO with your GitHub username and repo name
+CDN_BASE = "https://raw.githubusercontent.com/Anand1bhatt/my-jds-mcp/main/assets"
+
+ASSETS = {
+    "fonts": {
+        "description": "JioType font family (WOFF2 for web)",
+        "cdn_base": f"{CDN_BASE}/fonts/woff2",
+        "files": [
+            "JioTypeVarSubsetW05-Italic.woff2",
+            "JioTypeVarSubsetW05-Regular.woff2",
+            "JioTypeVarW05-Italic.woff2",
+            "JioTypeVarW05-Regular.woff2",
+            "JioTypeW05-Black.woff2",
+            "JioTypeW05-BlackItalic.woff2",
+            "JioTypeW05-Bold.woff2",
+            "JioTypeW05-BoldItalic.woff2",
+            "JioTypeW05-ExtraBlack.woff2",
+            "JioTypeW05-ExtraBlackItalic.woff2",
+            "JioTypeW05-Hairline.woff2",
+            "JioTypeW05-HairlineItalic.woff2",
+            "JioTypeW05-Italic.woff2",
+            "JioTypeW05-Light.woff2",
+            "JioTypeW05-LightItalic.woff2",
+            "JioTypeW05-Medium.woff2",
+            "JioTypeW05-MediumItalic.woff2",
+            "JioTypeW05-Regular.woff2",
+        ],
+        "usage_css": (
+            f"@font-face {{ font-family: 'JioType'; font-weight: 400; "
+            f"src: url('{CDN_BASE}/fonts/woff2/JioTypeVarW05-Regular.woff2') format('woff2'); }}\n"
+            f"@font-face {{ font-family: 'JioType'; font-weight: 500; "
+            f"src: url('{CDN_BASE}/fonts/woff2/JioTypeW05-Medium.woff2') format('woff2'); }}\n"
+            f"@font-face {{ font-family: 'JioType'; font-weight: 700; "
+            f"src: url('{CDN_BASE}/fonts/woff2/JioTypeW05-Bold.woff2') format('woff2'); }}"
+        ),
+    },
+    "animations": {
+        "description": "HelloJio animation assets (MP4)",
+        "cdn_base": f"{CDN_BASE}/animations",
+        "files": [
+            "HelloJio_Breath(IdleState)_241.mp4",
+            "HelloJio_Listening_241.mp4",
+        ],
+    },
+    "icons": {
+        "description": "JDS icon components (71 JSX)",
+        "cdn_base": f"{CDN_BASE}/icons",
+        "count": 71,
+        "usage_note": "Icons are React Native SVG components (.jsx). For HTML prototypes, use the svg_path from find_icon tool.",
+    },
+    "states": {
+        "description": "Voice Q&A animation states — 9 Light + 9 Dark MP4s",
+        "cdn_base": f"{CDN_BASE}/states",
+        "files": {
+            "light": [
+                "Light/Idle_state.mp4",
+                "Light/Listening_state.mp4",
+                "Light/Speaking_State.mp4",
+                "Light/Bot to bot speaking_state.mp4",
+                "Light/Thinking_state.mp4",
+                "Light/Thinking Reveal_State.mp4",
+                "Light/Thinking End_state.mp4",
+                "Light/User speaking to bot_state.mp4",
+                "Light/HelloJio_Complete_242.mp4",
+            ],
+            "dark": [
+                "Dark/HelloJio_Breath(IdleState)_242.mp4",
+                "Dark/HelloJio_Listening_242.mp4",
+                "Dark/HelloJio_BotSpeaking_242.mp4",
+                "Dark/HelloJio_ThinkingToBotSpeak 242.mp4",
+                "Dark/HelloJio_ThinkingLoop_242.mp4",
+                "Dark/HelloJio_ThinkingReveal_242.mp4",
+                "Dark/HelloJio_ThinkingEnd_242.mp4",
+                "Dark/HelloJio_UserSpeaktoBotSpeak_242.mp4",
+                "Dark/HelloJio_Complete_242.mp4",
+            ],
+        },
+    },
+}
+
+# ── Icon Library (71 icons with SVG paths) ────────────────────────────────────
+
+ICONS = {
+    "IcAccessibility": {"keywords": ["accessibility", "wheelchair", "disability"], "viewBox": "0 0 24 24", "svg_path": "M12 2a2 2 0 100 4 2 2 0 000-4zm-1 5a1 1 0 00-1 1v4a1 1 0 001 1h.5v5a1 1 0 002 0v-5h.5a1 1 0 001-1V8a1 1 0 00-1-1h-3z"},
+    "IcAdd": {"keywords": ["add", "plus", "create", "new"], "viewBox": "0 0 24 24", "svg_path": "M19 11h-6V5a1 1 0 00-2 0v6H5a1 1 0 000 2h6v6a1 1 0 002 0v-6h6a1 1 0 000-2z"},
+    "IcAlarm": {"keywords": ["alarm", "clock", "timer", "alert"], "viewBox": "0 0 24 24", "svg_path": "M12 2a9 9 0 100 18A9 9 0 0012 2zm0 2a7 7 0 110 14A7 7 0 0112 4zm0 2a1 1 0 00-1 1v5l3.5 2.1a1 1 0 001-1.73L13 11.42V7a1 1 0 00-1-1zM4.22 4.93a1 1 0 00-.65 1.75l1.5 1.25a1 1 0 101.28-1.54L4.87 5.14a1 1 0 00-.65-.21zm15.56 0a1 1 0 00-.65.21l-1.5 1.25a1 1 0 101.28 1.54l1.5-1.25a1 1 0 00-.63-1.75z"},
+    "IcArrowBack": {"keywords": ["arrow", "back", "left", "return", "previous"], "viewBox": "0 0 24 24", "svg_path": "M20 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H20c.55 0 1-.45 1-1s-.45-1-1-1z"},
+    "IcBack": {"keywords": ["back", "arrow", "left", "return"], "viewBox": "0 0 24 24", "svg_path": "M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"},
+    "IcBrain": {"keywords": ["brain", "ai", "intelligence", "think"], "viewBox": "0 0 24 24", "svg_path": "M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"},
+    "IcBurgerMenu": {"keywords": ["menu", "hamburger", "navigation", "nav", "burger"], "viewBox": "0 0 24 24", "svg_path": "M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"},
+    "IcCalendar": {"keywords": ["calendar", "date", "schedule", "event"], "viewBox": "0 0 24 24", "svg_path": "M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"},
+    "IcCalendarEvent": {"keywords": ["calendar", "event", "appointment", "schedule"], "viewBox": "0 0 24 24", "svg_path": "M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"},
+    "IcCalendarWeek": {"keywords": ["calendar", "week", "schedule"], "viewBox": "0 0 24 24", "svg_path": "M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"},
+    "IcCart": {"keywords": ["cart", "shopping", "buy", "purchase", "basket"], "viewBox": "0 0 24 24", "svg_path": "M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96C5 16.1 5.9 17 7 17h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0023.45 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"},
+    "IcChat": {"keywords": ["chat", "message", "conversation", "talk", "comment"], "viewBox": "0 0 24 24", "svg_path": "M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"},
+    "IcChevronDown": {"keywords": ["chevron", "down", "arrow", "expand", "dropdown"], "viewBox": "0 0 24 24", "svg_path": "M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"},
+    "IcChevronLeft": {"keywords": ["chevron", "left", "arrow", "back", "previous"], "viewBox": "0 0 24 24", "svg_path": "M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"},
+    "IcChevronRight": {"keywords": ["chevron", "right", "arrow", "forward", "next"], "viewBox": "0 0 24 24", "svg_path": "M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"},
+    "IcChevronUp": {"keywords": ["chevron", "up", "arrow", "collapse", "expand"], "viewBox": "0 0 24 24", "svg_path": "M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"},
+    "IcClose": {"keywords": ["close", "dismiss", "cancel", "x", "remove", "clear"], "viewBox": "0 0 24 24", "svg_path": "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"},
+    "IcCloseRemove": {"keywords": ["close", "remove", "delete", "clear"], "viewBox": "0 0 24 24", "svg_path": "M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"},
+    "IcConfirm": {"keywords": ["confirm", "check", "tick", "done", "yes", "accept"], "viewBox": "0 0 24 24", "svg_path": "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"},
+    "IcCopy": {"keywords": ["copy", "duplicate", "clipboard"], "viewBox": "0 0 24 24", "svg_path": "M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"},
+    "IcCopyDocument": {"keywords": ["copy", "document", "file", "duplicate"], "viewBox": "0 0 24 24", "svg_path": "M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v13z"},
+    "IcDislike": {"keywords": ["dislike", "thumbs down", "negative", "bad"], "viewBox": "0 0 24 24", "svg_path": "M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"},
+    "IcDocument": {"keywords": ["document", "file", "paper", "doc"], "viewBox": "0 0 24 24", "svg_path": "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"},
+    "IcDownload": {"keywords": ["download", "save", "arrow down"], "viewBox": "0 0 24 24", "svg_path": "M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"},
+    "IcEditPen": {"keywords": ["edit", "pen", "write", "modify", "pencil"], "viewBox": "0 0 24 24", "svg_path": "M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"},
+    "IcError": {"keywords": ["error", "warning", "alert", "danger", "exclamation"], "viewBox": "0 0 24 24", "svg_path": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"},
+    "IcFavorite": {"keywords": ["favorite", "heart", "like", "love", "wishlist"], "viewBox": "0 0 24 24", "svg_path": "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"},
+    "IcFilterMultiple": {"keywords": ["filter", "sort", "settings", "options"], "viewBox": "0 0 24 24", "svg_path": "M4.25 5.61C6.27 8.2 10 13 10 13v6c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-6s3.72-4.8 5.74-7.39c.51-.66.04-1.61-.79-1.61H5.04c-.83 0-1.3.95-.79 1.61z"},
+    "IcFirstpage": {"keywords": ["first", "page", "beginning", "start", "rewind"], "viewBox": "0 0 24 24", "svg_path": "M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6zM6 6h2v12H6z"},
+    "IcHomeConnection": {"keywords": ["home", "house", "wifi", "connection", "network"], "viewBox": "0 0 24 24", "svg_path": "M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"},
+    "IcInfo": {"keywords": ["info", "information", "help", "about"], "viewBox": "0 0 24 24", "svg_path": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"},
+    "IcJioDot": {"keywords": ["jio", "dot", "logo", "brand"], "viewBox": "0 0 24 24", "svg_path": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"},
+    "IcLanguage": {"keywords": ["language", "globe", "translate", "world", "international"], "viewBox": "0 0 24 24", "svg_path": "M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"},
+    "IcLastpage": {"keywords": ["last", "page", "end", "forward", "fast forward"], "viewBox": "0 0 24 24", "svg_path": "M5.59 7.41L10.18 12l-4.59 4.59L7 18l6-6-6-6zM16 6h2v12h-2z"},
+    "IcLike": {"keywords": ["like", "thumbs up", "positive", "good", "approve"], "viewBox": "0 0 24 24", "svg_path": "M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"},
+    "IcList": {"keywords": ["list", "items", "menu", "bullet"], "viewBox": "0 0 24 24", "svg_path": "M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"},
+    "IcMic": {"keywords": ["mic", "microphone", "voice", "audio", "speak", "record"], "viewBox": "0 0 24 24", "svg_path": "M12 15a3 3 0 003-3V5a3 3 0 00-6 0v7a3 3 0 003 3zm6-5a1 1 0 00-1 1v1a5 5 0 11-10 0v-1a1 1 0 10-2 0v1a7 7 0 1014 0v-1a1 1 0 00-1-1zm-3 10H9a1 1 0 000 2h6a1 1 0 000-2z"},
+    "IcMicOff": {"keywords": ["mic off", "mute", "microphone off", "no audio"], "viewBox": "0 0 24 24", "svg_path": "M19 11h-1.7c0 .74-.16 1.43-.43 2.05l1.23 1.23c.56-.98.9-2.09.9-3.28zm-4.02.17c0-.06.02-.11.02-.17V5c0-1.66-1.34-3-3-3S9 3.34 9 5v.18l5.98 5.99zM4.27 3L3 4.27l6.01 6.01V11c0 1.66 1.33 3 2.99 3 .22 0 .44-.03.65-.08l1.66 1.66c-.71.33-1.5.52-2.31.52-2.76 0-5.3-2.1-5.3-5.1H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c.91-.13 1.77-.45 2.54-.9L19.73 21 21 19.73 4.27 3z"},
+    "IcMinus": {"keywords": ["minus", "subtract", "remove", "decrease"], "viewBox": "0 0 24 24", "svg_path": "M19 13H5v-2h14v2z"},
+    "IcMoreHorizontal": {"keywords": ["more", "options", "dots", "menu", "ellipsis"], "viewBox": "0 0 24 24", "svg_path": "M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"},
+    "IcNext": {"keywords": ["next", "forward", "arrow", "right"], "viewBox": "0 0 24 24", "svg_path": "M6.23 20.23L8 22l10-10L8 2 6.23 3.77 14.46 12z"},
+    "IcNightClear": {"keywords": ["night", "moon", "dark", "sleep"], "viewBox": "0 0 24 24", "svg_path": "M10 2c-1.82 0-3.53.5-5 1.35C7.99 5.08 10 8.3 10 12s-2.01 6.92-5 8.65C6.47 21.5 8.18 22 10 22c5.52 0 10-4.48 10-10S15.52 2 10 2z"},
+    "IcNotification": {"keywords": ["notification", "bell", "alert", "reminder"], "viewBox": "0 0 24 24", "svg_path": "M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"},
+    "IcPause": {"keywords": ["pause", "stop", "media", "player"], "viewBox": "0 0 24 24", "svg_path": "M6 19h4V5H6v14zm8-14v14h4V5h-4z"},
+    "IcPhotoCamera": {"keywords": ["camera", "photo", "picture", "image", "capture"], "viewBox": "0 0 24 24", "svg_path": "M12 15.2c-1.77 0-3.2-1.43-3.2-3.2s1.43-3.2 3.2-3.2 3.2 1.43 3.2 3.2-1.43 3.2-3.2 3.2zM9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9z"},
+    "IcPlay": {"keywords": ["play", "start", "media", "video", "audio"], "viewBox": "0 0 24 24", "svg_path": "M8 5v14l11-7z"},
+    "IcProfile": {"keywords": ["profile", "user", "person", "account", "avatar"], "viewBox": "0 0 24 24", "svg_path": "M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"},
+    "IcRefresh": {"keywords": ["refresh", "reload", "update", "sync", "retry"], "viewBox": "0 0 24 24", "svg_path": "M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"},
+    "IcRepeat": {"keywords": ["repeat", "loop", "replay", "redo"], "viewBox": "0 0 24 24", "svg_path": "M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"},
+    "IcSearch": {"keywords": ["search", "find", "magnify", "look", "explore"], "viewBox": "0 0 24 24", "svg_path": "M10.004 2a7 7 0 015.6 11.19l6.11 6.1a1.002 1.002 0 01-.325 1.639.999.999 0 01-1.095-.219l-6.1-6.11A7 7 0 1110.004 2zm0 12a5 5 0 100-10 5 5 0 000 10z"},
+    "IcSendMessage": {"keywords": ["send", "message", "submit", "arrow", "paper plane"], "viewBox": "0 0 24 24", "svg_path": "M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"},
+    "IcSettings": {"keywords": ["settings", "gear", "preferences", "configure", "options"], "viewBox": "0 0 24 24", "svg_path": "M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"},
+    "IcShare": {"keywords": ["share", "export", "send", "social"], "viewBox": "0 0 24 24", "svg_path": "M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"},
+    "IcStar": {"keywords": ["star", "rating", "favorite", "bookmark", "gold"], "viewBox": "0 0 24 24", "svg_path": "M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"},
+    "IcStop": {"keywords": ["stop", "square", "halt", "end"], "viewBox": "0 0 24 24", "svg_path": "M6 6h12v12H6z"},
+    "IcStopwatch": {"keywords": ["stopwatch", "timer", "time", "clock", "countdown"], "viewBox": "0 0 24 24", "svg_path": "M15.07 1.01h-6v2h6v-2zm-4 13h2v-6h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C17.07 4.74 15.13 4 13.07 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.06-.74-3.93-1.97-5.6zm-7.03 12.6c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"},
+    "IcSuccess": {"keywords": ["success", "check", "done", "complete", "tick", "correct"], "viewBox": "0 0 24 24", "svg_path": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"},
+    "IcSunnyClear": {"keywords": ["sun", "sunny", "clear", "bright", "weather", "day"], "viewBox": "0 0 24 24", "svg_path": "M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"},
+    "IcTask": {"keywords": ["task", "todo", "checklist", "assignment"], "viewBox": "0 0 24 24", "svg_path": "M14 6l-1-2H5v17h2v-7h5l1 2h7V6h-6zm4 8h-4l-1-2H7V6h5l1 2h5v6z"},
+    "IcText": {"keywords": ["text", "font", "type", "typography"], "viewBox": "0 0 24 24", "svg_path": "M2.5 4v3h5v12h3V7h5V4h-13zm19 5h-9v3h3v7h3v-7h3V9z"},
+    "IcTheme": {"keywords": ["theme", "palette", "color", "appearance"], "viewBox": "0 0 24 24", "svg_path": "M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"},
+    "IcTime": {"keywords": ["time", "clock", "hour", "schedule", "watch"], "viewBox": "0 0 24 24", "svg_path": "M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"},
+    "IcTrash": {"keywords": ["trash", "delete", "remove", "bin", "garbage"], "viewBox": "0 0 24 24", "svg_path": "M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"},
+    "IcUpload": {"keywords": ["upload", "cloud", "save", "arrow up", "transfer"], "viewBox": "0 0 24 24", "svg_path": "M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"},
+    "IcVoice": {"keywords": ["voice", "microphone", "speak", "waveform", "audio"], "viewBox": "0 0 24 24", "svg_path": "M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"},
+    "IcWarning": {"keywords": ["warning", "caution", "alert", "triangle", "exclamation"], "viewBox": "0 0 24 24", "svg_path": "M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"},
+    "IcWidgets": {"keywords": ["widgets", "grid", "dashboard", "apps", "tiles"], "viewBox": "0 0 24 24", "svg_path": "M13 13v8h8v-8h-8zM3 21h8v-8H3v8zM3 3v8h8V3H3zm13.66-1.31L11 7.34 16.66 13l5.66-5.66-5.66-5.65z"},
+    "IcWifiOff": {"keywords": ["wifi off", "no internet", "disconnected", "offline"], "viewBox": "0 0 24 24", "svg_path": "M22.99 9C19.15 5.16 13.8 3.76 8.84 4.78L11 6.94c3.05-.39 6.23.53 8.56 2.86L22.99 9zM13 17.5c0-.28.02-.55.06-.81L12 15.68 6.07 9.75c-1.54 1.01-2.9 2.31-4.07 3.84L12 23l.87-.87c-.54-.61-.87-1.41-.87-2.31V17.5zM20.48 15.35L22 13.83c-.91-.91-1.92-1.66-3-2.26l-1.59 1.59c1.05.52 2.03 1.2 2.91 1.92l.16.27zM16 18c0 .21.02.42.05.62l2.95 2.95 1.42-1.42-2.93-2.93A3.975 3.975 0 0014.07 19l1.44 1.44c.22-.43.36-.91.41-1.44H16zM8.07 11.57l-1.45-1.45C5.56 11.1 4.63 12.02 3.8 13.08l1.51 1.51c.8-1.09 1.72-2.04 2.76-3.02z"},
+    "PsJioMart": {"keywords": ["jiomart", "mart", "shopping", "grocery", "store"], "viewBox": "0 0 24 24", "svg_path": "M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96C5 16.1 5.9 17 7 17h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0023.45 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"},
+    "WmJiomart": {"keywords": ["jiomart", "watermark", "brand", "logo"], "viewBox": "0 0 24 24", "svg_path": "M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm-1 14H5c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v10c0 .55-.45 1-1 1z"},
+    "IcAlbum": {"keywords": ["album", "music", "media", "record", "disc"], "viewBox": "0 0 24 24", "svg_path": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14.5c-2.49 0-4.5-2.01-4.5-4.5S9.51 7.5 12 7.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5zm0-5.5c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"},
+    "IcAccessibility": {"keywords": ["accessibility", "wheelchair", "person", "disability"], "viewBox": "0 0 24 24", "svg_path": "M12 2a2 2 0 100 4 2 2 0 000-4zm-1 5a1 1 0 00-1 1v4a1 1 0 001 1h.5v5a1 1 0 002 0v-5h.5a1 1 0 001-1V8a1 1 0 00-1-1h-3z"},
+}
+
+# ── JDS Mandatory Rules (injected into every tool response) ───────────────────
+
+JDS_RULES = """
+MANDATORY JDS RULES:
+- FONTS: JioType only. Never Inter, Arial, Roboto, system-ui, or sans-serif.
+- COLORS: JDS tokens only (primary-50=#3535f3, secondary-50=#f7ab20, error=#fa2f40, etc.)
+- TYPOGRAPHY: JDS scale only (display/headline/title/body/label variants).
+- SPACING: JDS spacing tokens only (xs=8px, s=12px, m=16px, xl=24px, etc.)
+- ICONS: JDS SVG library only (use find_icon → svg_path). Never Material/Heroicons/emoji.
+- ASSETS: Call get_assets first. Use cdn_url directly in HTML.
+- LOADING: Use Skeleton shimmer for loading states. NOT spinners.
+- LIGHT MODE: Default. Only dark mode if explicitly requested.
+- COMPLIANCE: Run validate_prototype before dev handoff.
+"""

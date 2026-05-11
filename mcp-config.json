@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "DesignXMCP": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/Anand1bhatt/my-jds-mcp.git",
+        "designxmcp"
+      ]
+    }
+  }
+}
