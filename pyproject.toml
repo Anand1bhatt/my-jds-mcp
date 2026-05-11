@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [project.scripts]
-designxmcp = "server:main"
+designxmcp = "server:run"
 
 [tool.hatch.build.targets.wheel]
 packages = ["."]
